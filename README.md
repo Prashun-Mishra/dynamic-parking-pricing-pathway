@@ -106,7 +106,7 @@ graph TD
 ├── streaming_dataset(1).csv                          # Simulated real-time data stream
 ├── output_prices(!).csv                              # Output from Pathway pipeline
 ├── README.md                                      # Project documentation
-├── report.pdf                                     # (Optional) Written project report
+├── Dynamic_Pricing_Parking_Report.docx                                     # (Optional) Written project report
 ├── mermaid_diagram.png / diagram.mmd              # (Optional) Mermaid diagram for GitHub
 ```
 
