@@ -24,20 +24,21 @@ This project tackles urban parking inefficiencies by implementing a dynamic pric
 
 ```mermaid
 graph TD
-    A[dataset.csv (historical data)] -->|preprocess| B[Cleaned & Engineered DataFrame]
-    B --> C1[Model 1: Linear Occupancy Pricing]
+    A[dataset.csv (Raw Historical Data)] --> B[Preprocessing: Cleaning & Feature Engineering]
+    B --> C1[Model 1: Linear Pricing]
     B --> C2[Model 2: Demand-Based Pricing]
     B --> C3[Model 3: Competitive Pricing]
-    C1 --> D[Final DataFrame with Price Columns]
+    C1 --> D[Final DataFrame with All Prices]
     C2 --> D
     C3 --> D
-    D -->|streaming simulation| E[streaming_dataset.csv]
-    E -->|read via Pathway| F[Pathway Real-Time Table]
-    F --> G[Live Aggregated Price Output]
+    D --> E[streaming_dataset.csv]
+    E --> F[Pathway Streaming Engine]
+    F --> G[Real-time Price Aggregation]
     G --> H[output_prices.csv]
-    D --> I[Bokeh Visualizations: Price Trends & Competition]
-    D --> J[Re-routing Suggestions (Optional)]
+    D --> I[Bokeh Visualizations: Line & Bar Charts]
+    D --> J[Optional: Re-routing Suggestions]
 ```
+
 
 ---
 
